@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('report/display/csv', 'ReportController@displayCsv');
-Route::get('report/display/excel', 'ReportController@displayExcel');
-Route::get('report/display/pdf', 'ReportController@displayPdf');
+
+Route::get('report/display/csv', [ReportController::class, 'displayCsv']);
+Route::get('report/display/excel', [ReportController::class, 'displayExcel']);
+Route::get('report/display/pdf', [ReportController::class, 'displayPdf']);

@@ -1,4 +1,4 @@
-# Laravel 7 報告產生器
+# Laravel 8 報告產生器
 
 引入 jimmyjs 的 laravel-report-generator 套件來擴增快速生成簡單的 Pdf、CSV 和 Excel 報告，產生可供列印且符合排版需求的文件。
 

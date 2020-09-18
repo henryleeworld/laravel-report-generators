@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Jimmyjs\ReportGenerator\Facades\PdfReportFacade as PdfReport;
 use Jimmyjs\ReportGenerator\Facades\ExcelReportFacade as ExcelReport;
