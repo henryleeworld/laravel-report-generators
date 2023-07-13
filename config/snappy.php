@@ -35,7 +35,7 @@ return [
     
     'pdf' => [
         'enabled' => true,
-        'binary'  => env('WKHTML_PDF_BINARY', (PHP_OS == 'WINNT') ? '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"' : base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64')),
+        'binary'  => env('WKHTML_PDF_BINARY', (PHP_OS == 'WINNT') ? '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"' : '/usr/local/bin/wkhtmltopdf'),
         'timeout' => false,
         'options' => [],
         'env'     => [],

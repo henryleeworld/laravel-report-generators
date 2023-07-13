@@ -1,4 +1,4 @@
-# Laravel 9 報告產生器
+# Laravel 10 報告產生器
 
 引入 jimmyjs 的 laravel-report-generator 套件來擴增快速生成簡單的 Pdf、CSV 和 Excel 報告，產生可供列印且符合排版需求的文件。
 
@@ -26,11 +26,11 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/mGpNitD.png)
+![](https://i.imgur.com/9D7bmsA.png)
 > .csv（以逗號分隔）格式的檔案是以 UTF-8 編碼
 
-![](https://i.imgur.com/bI53CAJ.png)
+![](https://i.imgur.com/kHVldfc.png)
 > .xlsx 格式從 Excel 2007 開始，XLSX 是 XML 格式，而且從 Excel 2007 開始是預設格式
 
-![](https://i.imgur.com/eI4lT8h.png)
+![](https://i.imgur.com/RhKs2ag.png)
 > .pdf（可攜式文件格式）檔案可使用 Adobe Reader 瀏覽
