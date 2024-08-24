@@ -45,21 +45,21 @@ class ReportController extends Controller
         $fromDate = $request->input('from_date') ?? '2000-01-01 01:00:00';
         $toDate = $request->input('to_date') ?? '2999-12-31 23:59:59';
 
-        $title = '註冊使用者報告'; // Report title
+        $title = __('Registered users report'); // Report title
 
         $meta = [ // For displaying filters description on header
-            '註冊區間：' => $fromDate . ' 到 ' . $toDate
+            __('Registration interval: ') => $fromDate . __(' to ') . $toDate
         ];
 
         $queryBuilder = User::select(['id', 'name', 'email', 'created_at']) // Do some querying..
                         ->whereBetween('created_at', [$fromDate, $toDate]);
 
         $columns = [ // Set Column to be displayed
-            '名稱' => 'name',
-            '電子郵件' => 'email',
-            '建立時間' => 'created_at', // if no column_name specified, this will automatically seach for snake_case of column name (will be registered_at) column from query result
-            '狀態' => function($result) { // You can do if statement or any action do you want inside this closure
-                return ((int)$result->id > 10) ? '' : '前十名註冊';
+            __('Name') => 'name',
+            __('Email') => 'email',
+            __('Created At') => 'created_at', // if no column_name specified, this will automatically seach for snake_case of column name (will be registered_at) column from query result
+            __('Condition') => function($result) { // You can do if statement or any action do you want inside this closure
+                return ((int)$result->id > 10) ? '' : __('Top ten registration');
             }
         ];
         return [
