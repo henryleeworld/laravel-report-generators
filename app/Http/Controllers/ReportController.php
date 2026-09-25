@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Jimmyjs\ReportGenerator\Facades\PdfReportFacade as PdfReport;
-use Jimmyjs\ReportGenerator\Facades\ExcelReportFacade as ExcelReport;
 use Jimmyjs\ReportGenerator\Facades\CSVReportFacade as CSVReport;
+use Jimmyjs\ReportGenerator\Facades\ExcelReportFacade as ExcelReport;
+use Jimmyjs\ReportGenerator\Facades\PdfReportFacade as PdfReport;
 
 class ReportController extends Controller
 {
@@ -48,7 +48,7 @@ class ReportController extends Controller
             __('Registration interval: ') => $fromDate . __(' to ') . $toDate
         ];
 
-        $queryBuilder = User::select(['id', 'name', 'email', 'created_at']) // Do some querying..
+        $queryBuilder = User::select(['id', 'name', 'email', 'created_at'])
                         ->whereBetween('created_at', [$fromDate, $toDate]);
 
         $columns = [
